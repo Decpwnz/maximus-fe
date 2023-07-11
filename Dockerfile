@@ -36,8 +36,8 @@ COPY --from=build --chown=appuser:appuser /app/dist /usr/share/nginx/html
 # Copy the custom nginx.conf file to the Nginx configuration directory
 COPY nginx.conf /etc/nginx/nginx.conf
 
-# Expose port 80
-EXPOSE 80
+# Expose port 8080
+EXPOSE 8080
 
 # Start Nginx with the "daemon off;" directive
 CMD ["nginx", "-g", "daemon off;"]
